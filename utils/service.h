@@ -250,3 +250,46 @@ bool deleteProduct(const string& filename, const string& ItemID) {
 
     return true;
 }
+
+bool SearchProduct(const string&filename){
+    vector<Menu> menu = readMenuCSV(filename);
+    string searchTerm;
+    cout << ColorText(" Enter Drink Name to search: ", CYAN);
+    getline(cin >> ws, searchTerm);
+
+    vector<Menu> results;
+    for (const auto& item : menu) {
+        if (item.DrinkName.find(searchTerm) != string::npos) {
+            results.push_back(item);
+        }
+    }
+
+    if (results.empty()) {
+        cout << ColorText(" No matching products found for: " + searchTerm, RED) << endl;
+    } else {
+        cout << ColorText("\n Search Results:", GREEN) << endl;
+        cout << ColorText("───────────────────────────────────────────────" , MAGENTA)<< endl;
+        cout << " " << endl;
+        cout << ColorText("┌─────┬─────────────────────┬───────────┬─────────┐", MAGENTA) << endl;
+        cout << ColorText("│ ID  │ Drink Name          │ Size      │ Price   │", MAGENTA) << endl;
+        cout << ColorText("├─────┼─────────────────────┼───────────┼─────────┤", MAGENTA) << endl;
+
+        for (const auto& item : results) {
+            cout << ColorText("│", MAGENTA) << " "
+                 << setw(3) << left << ColorText(item.ItemID, YELLOW) << " "
+                 << ColorText("│", MAGENTA) << " "
+                 << setw(30) << left << ColorText(item.DrinkName, GREEN) << " "
+                 << ColorText("│", MAGENTA) << " "
+                 << setw(20) << left << ColorText(item.Size, BLUE) << " "
+                 << ColorText("│", MAGENTA) << " $ "
+                 << setw(5) << right << fixed << setprecision(2) << item.Price << " "
+                 << ColorText("│", MAGENTA) << endl;
+        }
+
+        cout << ColorText("└─────┴─────────────────────┴───────────┴─────────┘", MAGENTA) << endl;
+    }
+
+    pressAnyKeyToContinue();
+    system("clear");
+    return true;
+}

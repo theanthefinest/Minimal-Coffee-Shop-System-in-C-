@@ -34,6 +34,8 @@ int main(){
             cout << ColorText(" Enter Item ID to delete: ", CYAN);
             cin >> itemID;
             deleteProduct("database/menu.csv", itemID);
+        } else if (choice == 5){
+            SearchProduct("database/menu.csv");
         } else if (choice == 8) {
             cout << ColorText(" Goodbye Admin, Have a Nice Day !!", GREEN) << endl;
             break;
