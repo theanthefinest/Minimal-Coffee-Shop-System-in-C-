@@ -29,6 +29,11 @@ int main(){
             cout << ColorText(" Enter Item ID to update: ", CYAN);
             cin >> itemID;
             updateProduct("database/menu.csv", itemID);
+        } else if (choice == 4) {
+            string itemID;
+            cout << ColorText(" Enter Item ID to delete: ", CYAN);
+            cin >> itemID;
+            deleteProduct("database/menu.csv", itemID);
         } else if (choice == 8) {
             cout << ColorText(" Goodbye Admin, Have a Nice Day !!", GREEN) << endl;
             break;

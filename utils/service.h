@@ -132,6 +132,8 @@ bool adddrinkProduct(const string& filename){
     file.close();
 
     cout << ColorText(" Product is successfully added ~ >.< ~", GREEN) <<endl;
+    pressAnyKeyToContinue();
+    system("clear");
     return true;
 }
 
@@ -196,6 +198,55 @@ bool updateProduct(const string& filename, const string& ItemID) {
              << item.Price << endl;
     }
     file.close();
+
+    pressAnyKeyToContinue();
+    system("clear");
+    return true;
+}
+
+//============> Delete Product <=================
+bool deleteProduct(const string& filename, const string& ItemID) {
+    vector<Menu> menu = readMenuCSV(filename);
+    bool found = false;
+
+    for (auto it = menu.begin(); it != menu.end(); ++it) {
+        if (it->ItemID == ItemID) {
+            found = true;
+            
+            cout << ColorText("\n🗑️ Current Item to Delete:", YELLOW) << endl;
+            cout << "ID: " << it->ItemID << " | "
+                 << "Drink: " << it->DrinkName << " | "
+                 << "Size: " << it->Size << " | "
+                 << "Price: " << it->Price << endl;
+
+            menu.erase(it); 
+            cout << ColorText("\n Product is successfully deleted ~ >.< ~", GREEN) << endl;
+            break;
+        }
+    }
+
+    if (!found) {
+        cerr << ColorText(" Product to delete not found. Check the ID.", RED) << endl;
+        return false;
+    }
+
+    ofstream file(filename);
+    if (!file.is_open()) {
+        cerr << ColorText(" Cannot open the file, please try again!", RED) << endl;
+        return false;
+    }
+
+    file << "ItemID,DrinkName,Size,Price" << endl;
+    for (const auto& item : menu) {
+        file << item.ItemID << ","
+             << item.DrinkName << ","
+             << item.Size << ","
+             << item.Price << endl;
+    }
+    file.close();
+
+    pressAnyKeyToContinue();
+    system("clear");
 
     return true;
 }

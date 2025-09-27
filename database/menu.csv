@@ -1,55 +1,55 @@
 ItemID,DrinkName,Size,Price
-001,Espresso,Single,2.50
-002,Espresso,Double,3.00
+001,Espresso,Single,2.5
+002,Espresso,Double,3
 003,Americano,Small,3.25
 004,Americano,Medium,3.75
 005,Americano,Large,4.25
-006,Latte,Small,4.00
-007,Latte,Medium,4.50
-008,Latte,Large,5.00
-009,Cappuccino,Small,4.00
-010,Cappuccino,Medium,4.50
-011,Cappuccino,Large,5.00
-012,Mocha,Small,4.50
-013,Mocha,Medium,5.00
-014,Mocha,Large,5.50
-015,Macchiato,Single,3.50
-016,Macchiato,Double,4.00
+006,Latte,Small,4
+007,Latte,Medium,4.5
+008,Latte,Large,5
+009,Cappuccino,Small,4
+010,Cappuccino,Medium,4.5
+011,Cappuccino,Large,5
+012,Mocha,Small,4.5
+013,Mocha,Medium,5
+014,Mocha,Large,5.5
+015,Macchiato,Single,3.5
+016,Macchiato,Double,4
 017,Flat White,Small,4.25
 018,Flat White,Medium,4.75
-019,Cold Brew,Small,4.00
-020,Cold Brew,Medium,4.50
-021,Cold Brew,Large,5.00
-022,Iced Coffee,Small,3.50
-023,Iced Coffee,Medium,4.00
-024,Iced Coffee,Large,4.50
-025,Caramel Frappe,Small,5.00
-026,Caramel Frappe,Medium,5.50
-027,Caramel Frappe,Large,6.00
-028,Mocha Frappe,Small,5.00
-029,Mocha Frappe,Medium,5.50
-030,Mocha Frappe,Large,6.00
+019,Cold Brew,Small,4
+020,Cold Brew,Medium,4.5
+021,Cold Brew,Large,5
+022,Iced Coffee,Small,3.5
+023,Iced Coffee,Medium,4
+024,Iced Coffee,Large,4.5
+025,Caramel Frappe,Small,5
+026,Caramel Frappe,Medium,5.5
+027,Caramel Frappe,Large,6
+028,Mocha Frappe,Small,5
+029,Mocha Frappe,Medium,5.5
+030,Mocha Frappe,Large,6
 031,Hot Chocolate,Small,3.75
 032,Hot Chocolate,Medium,4.25
 033,Hot Chocolate,Large,4.75
 034,Green Tea,Small,2.75
-035,Green Tea,Medium,3.00
+035,Green Tea,Medium,3
 036,Green Tea,Large,3.25
 037,Black Tea,Small,2.75
-038,Black Tea,Medium,3.00
+038,Black Tea,Medium,3
 039,Black Tea,Large,3.25
-040,Iced Tea,Small,3.00
-041,Iced Tea,Medium,3.50
-042,Iced Tea,Large,4.00
-043,Matcha Latte,Small,4.50
-044,Matcha Latte,Medium,5.00
-045,Matcha Latte,Large,5.50
+040,Iced Tea,Small,3
+041,Iced Tea,Medium,3.5
+042,Iced Tea,Large,4
+043,Matcha Latte,Small,4.5
+044,Matcha Latte,Medium,5
+045,Matcha Latte,Large,5.5
 046,Chai Latte,Small,4.25
 047,Chai Latte,Medium,4.75
 048,Chai Latte,Large,5.25
-049,Vanilla Latte,Small,4.50
-050,Vanilla Latte,Medium,5.00
-051,Vanilla Latte,Large,5.50
+049,Vanilla Latte,Small,4.5
+050,Vanilla Latte,Medium,5
+051,Vanilla Latte,Large,5.5
 052,Hazelnut Cappuccino,Small,4.75
 053,Hazelnut Cappuccino,Medium,5.25
 054,Hazelnut Cappuccino,Large,5.75
